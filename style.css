@@ -15,15 +15,12 @@ header {
     width: 100%;
     /* height: 5rem; */
     padding: 1rem 3rem;
-    background-color: rgb(26, 26, 26);
+    background-color: #212121;
     color: rgb(253, 253, 253);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
+    /*  */
 }
 
 /* Site text logo */
@@ -70,16 +67,41 @@ main {
 
 
 
-/* JS ELEMENT CLASSES */
+/* JS ELEMENTS */
 .productContainer {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+    padding: 200px;
 }
-
-.productBtn {
+.productImage {
+    height: 500px;
+}
+.productDescription {
+    margin: 25px 0;
+    font-size: 1.2rem;
+}
+.productAddToCartBtn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: content-box;
-    width: 240px;
-    padding: 1rem 1rem;
+    width: 320px;
+    padding: 1rem 1.75rem;
+    border-style: none;
+    background-color: #5497f4;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.productAddToCartIcon {
+    font-size: 1.25rem;
+}
+.productAddToCartText {
+    font-size: 1.75rem;
+}
+.productAddToCartBtn:hover {
+    background-color: #0f5dc9;
+    cursor: pointer;
 }
