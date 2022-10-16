@@ -1,38 +1,64 @@
+/* General styling */
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-
     display: flex;
 }
 
-.head {
+header {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 3, 5rem;
-    position: fixed;
-
-    background-color: black;
-    color: white;
-
-}
-
-#logo {
-    margin-left: 1rem;
-}
-
-.material-symbolhead-shopingCards-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-}
-
-.head-shopingCard {
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
+    width: 100vw;
+    /* height: 5rem; */
+    padding: 1rem 3rem;
+    position: fixed;
+    background-color: rgb(26, 26, 26);
+    color: rgb(253, 253, 253);
+}
+
+/* Site text logo */
+.techstore-logo a {
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Shopping cart icon on right side of header */
+.shopping-cart-icon {
+    font-size: 2.5rem;
+    color: rgb(253, 253, 253);
+}
+
+/* User icon on right side of header */
+.user-icon {
+    font-size: 2.5rem;
+}
+
+.login-and-reg-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 250px;
+    padding: 0 2rem;
+}
+
+.login-and-reg {
+    line-height: 23px;
+}
+
+.header-login {
+    font-weight: bold;
 }
