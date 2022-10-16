@@ -35,15 +35,24 @@ function addProductsToWebpage() {
 
 
 
-        // PRODUCT CONTAINER
+        // CLASSES
         productContainer.classList = ("productContainer");
+        productTitle.classList = ("productTitle");
+        productDescription.classList = ("productDescription");
+        productImage.classList = ("productImage");
+        productPrice.classList = ("productPrice");
+        productAddToCartBtn.classList = ("productAddToCartBtn");
+        productAddToCartIcon.classList = ("fa-solid fa-cart-arrow-down productAddToCartIcon");
+        productAddToCartText.classList = ("productAddToCartText");
 
+
+
+        
         // PRODUCT NAME & DESCRIPTION
         productTitle.innerText = product.title;
         productDescription.innerText = product.description;
 
         // PRODUCT IMAGE
-        productImage.classList = ("productImage");
         const productImageURL = "./assets/" + product.image;
         productImage.setAttribute("src", productImageURL);
         productImage.setAttribute("alt", `Picture of a ${product.title}`);
@@ -51,9 +60,7 @@ function addProductsToWebpage() {
         // PRODUCT PRICE
         productPrice.innerText = `${product.price} kr`;
 
-        // ADD TO CART BUTTON, ICON & TEXT
-        productAddToCartBtn.classList = ("productBtn");
-        productAddToCartIcon.classList = ("fa-solid fa-cart-arrow-down");
+        // ADD TO SHOPPING CART TEXT
         productAddToCartText.innerText = "Lägg till i kundvagnen";
 
 
