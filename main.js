@@ -30,7 +30,7 @@ function addProductsToWebpage() {
         const productPrice = document.createElement("h2");
         const productAddToCartBtn = document.createElement("button");
         const productAddToCartIcon = document.createElement("i");
-        const productAddToCartText = document.createElement("h2");
+        const productAddToCartText = document.createElement("p");
 
 
 
