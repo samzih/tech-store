@@ -19,8 +19,9 @@ header {
     color: rgb(253, 253, 253);
 }
 
-/* main {
-} */
+main {
+    margin-top: 85px;
+}
 
 /* Site text logo */
 .techstore-logo a {
@@ -71,15 +72,24 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: beige;
-    padding: 200px;
+    background-color: rgb(254, 254, 254);
+    padding: 60px 0;
+}
+.productTitle {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.productDescription {
+    margin: 25px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: -0.5px;
 }
 .productImage {
     height: 500px;
 }
-.productDescription {
-    margin: 25px 0;
-    font-size: 1.2rem;
+.productPrice {
+    letter-spacing: -0.5px;
 }
 .productAddToCartBtn {
     display: flex;
@@ -94,13 +104,13 @@ header {
     border-radius: 10px;
     margin: 20px 0;
 }
+.productAddToCartBtn:hover {
+    background-color: #0f5dc9;
+    cursor: pointer;
+}
 .productAddToCartIcon {
     font-size: 1.25rem;
 }
 .productAddToCartText {
     font-size: 1.75rem;
-}
-.productAddToCartBtn:hover {
-    background-color: #0f5dc9;
-    cursor: pointer;
 }
