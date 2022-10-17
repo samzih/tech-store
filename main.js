@@ -35,6 +35,15 @@ function addProductsToWebpage() {
 
 
 
+        // EVENT LISTENER FOR ADD PRODUCT TO CART BUTTON
+        productAddToCartBtn.addEventListener("click", function() {
+            this.setAttribute("disabled", true);
+            console.log(product);           
+        });
+
+
+
+
         // CLASSES
         productContainer.classList = ("productContainer");
         productTitle.classList = ("productTitle");
@@ -47,7 +56,7 @@ function addProductsToWebpage() {
 
 
 
-        
+
         // PRODUCT NAME & DESCRIPTION
         productTitle.innerText = product.title;
         productDescription.innerText = product.description;
