@@ -107,10 +107,15 @@ function addLocalStorageCartProductsToCartPage() {
         // Hides the text that says cart is empty add more products...
         cartEmptyContainer.style.display = "none";
 
+        // Declared variable for adding up the total price of products in the shopping cart (local storage)
+        let totalPrice = 0;
+
         // Container that holds all the cartProductContainers
         const cartContainer = document.createElement("div");
 
         for (const cartProduct of cartListOfProducts) {
+
+            totalPrice += cartProduct.price;
 
             // CART PRODUCT ELEMENTS
             const cartProductContainer = document.createElement("div");
@@ -170,6 +175,9 @@ function addLocalStorageCartProductsToCartPage() {
         const cartCompletePurchaseBtn = document.createElement("button");
         const cartCompletePurchaseIcon = document.createElement("i");
         const cartCompletePurchaseText = document.createElement("p");
+
+        // TOTAL PRICE IN <H2>
+        cartTotalPrice.innerText = `Totalt pris: ${totalPrice} kr`;
 
         // TOTAL PRICE + COMPLETE PURCHASE BUTTON APPENDED IN MAIN
         document.querySelector("main").appendChild(cartTotalPrice);
