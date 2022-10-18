@@ -32,11 +32,7 @@ function addProductsToWebpage() {
         const productAddToCartIcon = document.createElement("i");
         const productAddToCartText = document.createElement("p");
 
-        // TOTAL PRICE & COMPLETE PURCHASE 
-        const cartTotalPrice = document.createElement("h2");
-        const cartCompletePurchaseBtn = document.createElement("button");
-        const cartCompletePurchaseIcon = document.createElement("i");
-        const cartCompletePurchaseText = document.createElement("p");
+
 
 
         // When clicking on the add to shopping cart button the object gets stored in local storage
@@ -106,6 +102,8 @@ function addLocalStorageCartProductsToCartPage() {
         const cartListOfProducts = JSON.parse(localStorage.getItem("cart"));
         console.log(cartListOfProducts);
         for (const cartProduct of cartListOfProducts) {
+            
+            // CART PRODUCT ELEMENTS
             const cartContainer = document.createElement("div");
             const cartProductContainer = document.createElement("div");
             const cartProductImage = document.createElement("img");
@@ -114,6 +112,12 @@ function addLocalStorageCartProductsToCartPage() {
             const cartProductRemoveFromCartBtn = document.createElement("button");
             const cartProductRemoveFromCartIcon = document.createElement("i");
             const cartProductRemoveFromCartText = document.createElement("p");
+
+            // TOTAL PRICE & COMPLETE PURCHASE
+            const cartTotalPrice = document.createElement("h2");
+            const cartCompletePurchaseBtn = document.createElement("button");
+            const cartCompletePurchaseIcon = document.createElement("i");
+            const cartCompletePurchaseText = document.createElement("p");
 
 
 
