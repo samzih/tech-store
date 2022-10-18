@@ -101,8 +101,9 @@ function addLocalStorageCartProductsToCartPage() {
     if (localStorage.getItem("cart")) {
         const cartListOfProducts = JSON.parse(localStorage.getItem("cart"));
         console.log(cartListOfProducts);
+        
         for (const cartProduct of cartListOfProducts) {
-            
+
             // CART PRODUCT ELEMENTS
             const cartContainer = document.createElement("div");
             const cartProductContainer = document.createElement("div");
@@ -112,12 +113,6 @@ function addLocalStorageCartProductsToCartPage() {
             const cartProductRemoveFromCartBtn = document.createElement("button");
             const cartProductRemoveFromCartIcon = document.createElement("i");
             const cartProductRemoveFromCartText = document.createElement("p");
-
-            // TOTAL PRICE & COMPLETE PURCHASE
-            const cartTotalPrice = document.createElement("h2");
-            const cartCompletePurchaseBtn = document.createElement("button");
-            const cartCompletePurchaseIcon = document.createElement("i");
-            const cartCompletePurchaseText = document.createElement("p");
 
 
 
@@ -152,6 +147,7 @@ function addLocalStorageCartProductsToCartPage() {
 
 
 
+            // PRODUCTS APPENDED INSIDE OF CART CONTAINER
             document.querySelector("main").appendChild(cartContainer);
             cartContainer.appendChild(cartProductContainer);
             cartProductContainer.appendChild(cartProductImage);
@@ -161,6 +157,20 @@ function addLocalStorageCartProductsToCartPage() {
             cartProductRemoveFromCartBtn.appendChild(cartProductRemoveFromCartIcon);
             cartProductRemoveFromCartBtn.appendChild(cartProductRemoveFromCartText);
         }
+
+        // TOTAL PRICE & COMPLETE PURCHASE
+        const cartTotalPrice = document.createElement("h2");
+        const cartCompletePurchaseBtn = document.createElement("button");
+        const cartCompletePurchaseIcon = document.createElement("i");
+        const cartCompletePurchaseText = document.createElement("p");
+
+        // TOTAL PRICE + COMPLETE PURCHASE BUTTON APPENDED IN MAIN
+        document.querySelector("main").appendChild(cartTotalPrice);
+        document.querySelector("main").appendChild(cartCompletePurchaseBtn);
+        cartCompletePurchaseBtn.appendChild(cartCompletePurchaseIcon);
+        cartCompletePurchaseBtn.appendChild(cartCompletePurchaseText);
+
+
     }else {
         console.log("Kungvagnen är tom!");
         return;
