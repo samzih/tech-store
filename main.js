@@ -38,7 +38,14 @@ function addProductsToWebpage() {
         // EVENT LISTENER FOR ADD PRODUCT TO CART BUTTON
         productAddToCartBtn.addEventListener("click", function() {
             this.setAttribute("disabled", true);
-            console.log(product);           
+            console.log(product);
+            if (!localStorage.getItem("cart")) {
+                localStorage.setItem("cart", JSON.stringify([product]));
+            }else {
+                const cart = JSON.parse(localStorage.getItem("cart"));
+                cart.push(product);
+                localStorage.setItem("cart", JSON.stringify(cart));
+            }     
         });
 
 
