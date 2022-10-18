@@ -35,7 +35,7 @@ function addProductsToWebpage() {
 
 
 
-        // EVENT LISTENER FOR ADD PRODUCT TO CART BUTTON
+        // When clicking on the add to shopping cart button the object gets stored in local storage
         productAddToCartBtn.addEventListener("click", function() {
             this.setAttribute("disabled", true);
             console.log(product);
@@ -45,7 +45,7 @@ function addProductsToWebpage() {
                 const cart = JSON.parse(localStorage.getItem("cart"));
                 cart.push(product);
                 localStorage.setItem("cart", JSON.stringify(cart));
-            }     
+            }
         });
 
 
@@ -91,5 +91,54 @@ function addProductsToWebpage() {
         productContainer.appendChild(productAddToCartBtn);
         productAddToCartBtn.appendChild(productAddToCartIcon);
         productAddToCartBtn.appendChild(productAddToCartText);
+    }
+}
+
+
+// Add a if else statement so that this only runs if there is a cart key in local storage
+// Something like this: if (localStorage.getItem("cart")) {run everything in the addLocalStorageCartProductsToCartPage function}
+// else {return} maybe add some element with innertext that says shopping cart is empty
+function addLocalStorageCartProductsToCartPage() {
+    const cartListOfProducts = JSON.parse(localStorage.getItem("cart"));
+    console.log(cartListOfProducts);
+
+    for (const cartProduct of cartListOfProducts) {
+        const cartContainer = document.createElement("div");
+        const productContainer = document.createElement("div");
+        const productImage = document.createElement("img");
+        const productTitle = document.createElement("h1");
+        const productPrice = document.createElement("h2");
+        const productRemoveFromCartBtn = document.createElement("button");
+        const productRemoveFromCartIcon = document.createElement("i");
+        const productRemoveFromCartText = document.createElement("p");
+
+
+
+
+        // LOCALSTORAGE PRODUCT IMAGE
+        const productImageURL = "./assets/" + cartProduct.image;
+        productImage.setAttribute("src", productImageURL);
+        productImage.setAttribute("alt", `Picture of a ${cartProduct.title}`);
+
+        // LOCALSTORAGE PRODUCT TITLE
+        productTitle.innerText = cartProduct.title;
+
+        // // LOCALSTORAGE PRODUCT PRICE
+        productPrice.innerText = `${cartProduct.price} kr`;
+
+        // // LOCALSTORAGE REMOVE FROM SHOPPING CART
+        productRemoveFromCartText.innerText = "Ta bort";
+        
+
+
+
+        document.querySelector("main").appendChild(cartContainer);
+        cartContainer.appendChild(productContainer);
+        productContainer.appendChild(productImage);
+        productContainer.appendChild(productTitle);
+        productContainer.appendChild(productPrice);
+        productContainer.appendChild(productRemoveFromCartBtn);
+        productRemoveFromCartBtn.appendChild(productRemoveFromCartIcon);
+        productRemoveFromCartBtn.appendChild(productRemoveFromCartText);
     }
 }
