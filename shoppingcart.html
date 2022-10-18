@@ -12,7 +12,7 @@
         <title>TechStore</title>
     </head>
 
-    <body>
+    <body onload="addLocalStorageCartProductsToCartPage()">
 
         <!-- Your header title and shopping cart button goes here  -->
         <header>
@@ -38,6 +38,10 @@
         </header>
 
         <main>
+            <div class="cart-headline-container">
+                <i class="fa-solid fa-cart-shopping" id="headline-cart-icon"></i>
+                <h1>Kundvagn</h1>
+            </div>
             <!-- Add the content of your site here via javascript -->
         </main>
     </body>
