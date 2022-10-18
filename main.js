@@ -32,7 +32,11 @@ function addProductsToWebpage() {
         const productAddToCartIcon = document.createElement("i");
         const productAddToCartText = document.createElement("p");
 
-
+        // TOTAL PRICE & COMPLETE PURCHASE 
+        const cartTotalPrice = document.createElement("h2");
+        const cartCompletePurchaseBtn = document.createElement("button");
+        const cartCompletePurchaseIcon = document.createElement("i");
+        const cartCompletePurchaseText = document.createElement("p");
 
 
         // When clicking on the add to shopping cart button the object gets stored in local storage
