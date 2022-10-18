@@ -43,6 +43,24 @@ main {
     color: rgb(253, 253, 253);
 }
 
+.cart-number-container {
+position: relative;
+
+}
+
+.cart-number-container div {
+    position: absolute;
+    background-color: rgb(235, 166, 38);
+    top: -6px;
+    right: -10px;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* User icon on right side of header */
 .user-icon {
     font-size: 2.5rem;

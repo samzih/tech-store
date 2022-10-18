@@ -31,6 +31,8 @@ function addProductsToWebpage() {
         const productAddToCartBtn = document.createElement("button");
         const productAddToCartIcon = document.createElement("i");
         const productAddToCartText = document.createElement("p");
+        
+        
 
 
 
