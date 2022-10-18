@@ -107,10 +107,12 @@ function addLocalStorageCartProductsToCartPage() {
         // Hides the text that says cart is empty add more products...
         cartEmptyContainer.style.display = "none";
 
+        // Container that holds all the cartProductContainers
+        const cartContainer = document.createElement("div");
+
         for (const cartProduct of cartListOfProducts) {
 
             // CART PRODUCT ELEMENTS
-            const cartContainer = document.createElement("div");
             const cartProductContainer = document.createElement("div");
             const cartProductImage = document.createElement("img");
             const cartProductTitle = document.createElement("h1");
