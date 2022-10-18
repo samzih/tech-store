@@ -103,42 +103,55 @@ function addLocalStorageCartProductsToCartPage() {
         console.log(cartListOfProducts);
         for (const cartProduct of cartListOfProducts) {
             const cartContainer = document.createElement("div");
-            const productContainer = document.createElement("div");
-            const productImage = document.createElement("img");
-            const productTitle = document.createElement("h1");
-            const productPrice = document.createElement("h2");
-            const productRemoveFromCartBtn = document.createElement("button");
-            const productRemoveFromCartIcon = document.createElement("i");
-            const productRemoveFromCartText = document.createElement("p");
+            const cartProductContainer = document.createElement("div");
+            const cartProductImage = document.createElement("img");
+            const cartProductTitle = document.createElement("h1");
+            const cartProductPrice = document.createElement("h2");
+            const cartProductRemoveFromCartBtn = document.createElement("button");
+            const cartProductRemoveFromCartIcon = document.createElement("i");
+            const cartProductRemoveFromCartText = document.createElement("p");
+
+
+
+
+            // CLASSES
+            cartContainer.classList = ("cartContainer");
+            cartProductContainer.classList = ("cartProductContainer");
+            cartProductImage.classList = ("cartProductImage");
+            cartProductTitle.classList = ("cartProductTitle");
+            cartProductPrice.classList = ("cartProductPrice");
+            cartProductRemoveFromCartBtn.classList = ("cartProductRemoveFromCartBtn");
+            cartProductRemoveFromCartIcon.classList = ("fa-regular fa-trash-can cartProductRemoveFromCartIcon");
+            cartProductRemoveFromCartText.classList = ("cartProductRemoveFromCartText");
 
 
 
 
             // LOCALSTORAGE PRODUCT IMAGE
             const productImageURL = "./assets/" + cartProduct.image;
-            productImage.setAttribute("src", productImageURL);
-            productImage.setAttribute("alt", `Picture of a ${cartProduct.title}`);
+            cartProductImage.setAttribute("src", productImageURL);
+            cartProductImage.setAttribute("alt", `Picture of a ${cartProduct.title}`);
 
             // LOCALSTORAGE PRODUCT TITLE
-            productTitle.innerText = cartProduct.title;
+            cartProductTitle.innerText = cartProduct.title;
 
             // // LOCALSTORAGE PRODUCT PRICE
-            productPrice.innerText = `${cartProduct.price} kr`;
+            cartProductPrice.innerText = `${cartProduct.price} kr`;
 
             // // LOCALSTORAGE REMOVE FROM SHOPPING CART
-            productRemoveFromCartText.innerText = "Ta bort";
+            cartProductRemoveFromCartText.innerText = "Ta bort";
             
 
 
 
             document.querySelector("main").appendChild(cartContainer);
-            cartContainer.appendChild(productContainer);
-            productContainer.appendChild(productImage);
-            productContainer.appendChild(productTitle);
-            productContainer.appendChild(productPrice);
-            productContainer.appendChild(productRemoveFromCartBtn);
-            productRemoveFromCartBtn.appendChild(productRemoveFromCartIcon);
-            productRemoveFromCartBtn.appendChild(productRemoveFromCartText);
+            cartContainer.appendChild(cartProductContainer);
+            cartProductContainer.appendChild(cartProductImage);
+            cartProductContainer.appendChild(cartProductTitle);
+            cartProductContainer.appendChild(cartProductPrice);
+            cartProductContainer.appendChild(cartProductRemoveFromCartBtn);
+            cartProductRemoveFromCartBtn.appendChild(cartProductRemoveFromCartIcon);
+            cartProductRemoveFromCartBtn.appendChild(cartProductRemoveFromCartText);
         }
     }else {
         console.log("Kungvagnen är tom!");
