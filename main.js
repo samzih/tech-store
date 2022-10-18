@@ -176,8 +176,17 @@ function addLocalStorageCartProductsToCartPage() {
         const cartCompletePurchaseIcon = document.createElement("i");
         const cartCompletePurchaseText = document.createElement("p");
 
+        // CLASSES
+        cartTotalPrice.classList = ("cartTotalPrice");
+        cartCompletePurchaseBtn.classList = ("cartCompletePurchaseBtn");
+        cartCompletePurchaseIcon.classList = ("fa-solid fa-check cartCompletePurchaseIcon");
+        cartCompletePurchaseText.classList = ("cartCompletePurchaseText");
+
         // TOTAL PRICE IN <H2>
         cartTotalPrice.innerText = `Totalt pris: ${totalPrice} kr`;
+
+        // COMPLETE PURCHASE BUTTON <p> TEXT
+        cartCompletePurchaseText.innerText = "Slutför ditt köp";
 
         // TOTAL PRICE + COMPLETE PURCHASE BUTTON APPENDED IN MAIN
         document.querySelector("main").appendChild(cartTotalPrice);
