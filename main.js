@@ -98,10 +98,15 @@ function addProductsToWebpage() {
 // Checks if there is a cart key in local storage and if so it adds them to the shopping cart page, otherwise if not then nothing really happens
 function addLocalStorageCartProductsToCartPage() {
 
+    const cartEmptyContainer = document.querySelector(".cart-empty-container");
+
     if (localStorage.getItem("cart")) {
         const cartListOfProducts = JSON.parse(localStorage.getItem("cart"));
         console.log(cartListOfProducts);
-        
+
+        // Hides the text that says cart is empty add more products...
+        cartEmptyContainer.style.display = "none";
+
         for (const cartProduct of cartListOfProducts) {
 
             // CART PRODUCT ELEMENTS
@@ -172,6 +177,7 @@ function addLocalStorageCartProductsToCartPage() {
 
 
     }else {
+        cartEmptyContainer.style.display = "block";
         console.log("Kungvagnen är tom!");
         return;
     }
