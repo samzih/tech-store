@@ -77,11 +77,19 @@ main {
     line-height: 23px;
 }
 
+.header-reg:hover {
+    cursor: pointer;
+    color: rgba(235, 166, 38);
+}
+
 .header-login {
     font-weight: bold;
 }
 
-
+.header-login:hover {
+    cursor: pointer;
+    color: rgba(235, 166, 38);
+}
 
 
 /* JS ELEMENTS */
