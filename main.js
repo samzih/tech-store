@@ -12,13 +12,15 @@ function loadProducts() {
     });
 }
 
+// Assigns the amount of products in the shopping cart to the cart product amount indicator
 function totalCartProducts() {
     if (localStorage.getItem("cart")) {
         const cartLS = JSON.parse(localStorage.getItem("cart"));
-        document.querySelector(".cart-number-container div").textContent = cartLS.length;        
+        document.querySelector(".cart-number-container div").textContent = cartLS.length;
+        document.querySelector(".cart-number-container div").style.display = "flex";
     } else {
-        return
-    }    
+        document.querySelector(".cart-number-container div").style.display = "none";
+    }
 }
 
 function initSite() {
@@ -207,9 +209,8 @@ function addLocalStorageCartProductsToCartPage() {
         cartCompletePurchaseBtn.appendChild(cartCompletePurchaseText);
 
 
-    }else {
+    } else {
         cartEmptyContainer.style.display = "block";
-        console.log("Kungvagnen är tom!");
-        return;
+        // console.log("Kungvagnen är tom!");
     }
 };
