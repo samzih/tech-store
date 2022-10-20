@@ -12,10 +12,19 @@ function loadProducts() {
     });
 }
 
+function totalCartProducts() {
+    if (localStorage.getItem("cart")) {
+        const cartLS = JSON.parse(localStorage.getItem("cart"));
+        document.querySelector(".cart-number-container div").textContent = cartLS.length;        
+    } else {
+        return
+    }    
+}
 
 function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI
+    totalCartProducts();
 }
 
 /* Uses the loaded products data to create a visible product list on the website */
@@ -38,7 +47,7 @@ function addProductsToWebpage() {
         // When clicking on the add to shopping cart button the object gets stored in local storage
         productAddToCartBtn.addEventListener("click", function() {
             this.setAttribute("disabled", true);
-            console.log(product);
+            // console.log(product);
             if (!localStorage.getItem("cart")) {
                 localStorage.setItem("cart", JSON.stringify([product]));
             }else {
@@ -46,6 +55,7 @@ function addProductsToWebpage() {
                 cart.push(product);
                 localStorage.setItem("cart", JSON.stringify(cart));
             }
+            totalCartProducts();
         });
 
 
@@ -97,6 +107,8 @@ function addProductsToWebpage() {
 
 // Checks if there is a cart key in local storage and if so it adds them to the shopping cart page, otherwise if not then nothing really happens
 function addLocalStorageCartProductsToCartPage() {
+
+    totalCartProducts();
 
     const cartEmptyContainer = document.querySelector(".cart-empty-container");
 
