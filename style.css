@@ -139,3 +139,114 @@ main {
 .productAddToCartText {
     font-size: 1.75rem;
 }
+
+
+/* SHOPPING CART PAGE */
+
+.cart-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart-headline-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 23rem;
+    margin: 3rem 0;
+}
+#headline-cart-icon {
+    font-size: 2.7rem;
+}
+.cart-headline-container h1 {
+    font-size: 3.5rem;
+}
+
+
+.cart-empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 9rem;
+    padding: 10rem;
+    background-color: rgb(238, 238, 238);
+    border: 2px solid rgba(155, 155, 155, 0.5);
+    border-radius: 3px;
+}
+
+
+.cartContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cartProductContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgb(240, 240, 240);
+    border: solid 2px rgb(106, 106, 206);
+    border-radius: 10px;
+}
+.cartProductImage {
+    height: 200px;
+}
+.cartProductTitle {
+    font-size: 2.7rem;
+}
+.cartProductPrice {
+    font-size: 1rem;
+}
+.cartProductRemoveFromCartBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 7rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: rgb(214, 75, 75);
+    border-style: none;
+    border-radius: 7px;
+}
+.cartProductRemoveFromCartIcon {
+    font-size: 1rem;
+
+}
+.cartProductRemoveFromCartText {
+    font-size: 19px;
+}
+
+
+.cartTotalPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.cartCompletePurchaseBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: content-box;
+    width: 200px;
+    padding: 1rem 1.75rem;
+    border-style: none;
+    background-color: #5497f4;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.cartCompletePurchaseBtn:hover {
+    background-color: #0f5dc9;
+    cursor: pointer;
+}
+.cartCompletePurchaseIcon {
+    font-size: 1.5rem;
+}
+.cartCompletePurchaseText {
+    font-size: 25px;
+}
