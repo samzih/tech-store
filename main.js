@@ -182,6 +182,19 @@ function addLocalStorageCartProductsToCartPage() {
             cartProductContainer.appendChild(cartProductRemoveFromCartBtn);
             cartProductRemoveFromCartBtn.appendChild(cartProductRemoveFromCartIcon);
             cartProductRemoveFromCartBtn.appendChild(cartProductRemoveFromCartText);
+
+
+
+
+            // When you press the product "Ta bort" button it removes the object from cart LS
+            cartProductRemoveFromCartBtn.addEventListener("click", function () {
+                // cartProduct is the object of the cartListOfProducts array
+                this.setAttribute("disabled", true);
+                let index = cartListOfProducts.indexOf(cartProduct);
+                cartListOfProducts.splice(index, 1)
+                localStorage.setItem("cart", JSON.stringify(cartListOfProducts));
+                totalCartProducts();
+            });
         }
 
         // TOTAL PRICE & COMPLETE PURCHASE
