@@ -186,14 +186,33 @@ function addLocalStorageCartProductsToCartPage() {
 
 
 
+            // This function removes the parent container that holds all the cart products as well as the total price header & complete purchase button
+            function removesCartContent() {
+                cartContainer.remove();
+                cartTotalPrice.remove();
+                cartCompletePurchaseBtn.remove();
+            }
+
+
+
+
             // When you press the product "Ta bort" button it removes the object from cart LS
             cartProductRemoveFromCartBtn.addEventListener("click", function () {
                 // cartProduct is the object of the cartListOfProducts array
                 this.setAttribute("disabled", true);
-                let index = cartListOfProducts.indexOf(cartProduct);
-                cartListOfProducts.splice(index, 1)
+                let cartIndex = cartListOfProducts.indexOf(cartProduct);
+                cartListOfProducts.splice(cartIndex, 1)
                 localStorage.setItem("cart", JSON.stringify(cartListOfProducts));
-                totalCartProducts();
+
+                if (localStorage.getItem("cart") == "[]") {
+                    localStorage.removeItem("cart");
+                    removesCartContent();
+                    addLocalStorageCartProductsToCartPage();
+                } else {
+                    removesCartContent();
+                    addLocalStorageCartProductsToCartPage();
+                }
+                
             });
         }
 
