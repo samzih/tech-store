@@ -210,7 +210,7 @@ function addLocalStorageCartProductsToCartPage() {
 
 
     } else {
-        cartEmptyContainer.style.display = "block";
+        cartEmptyContainer.style.display = "flex";
         // console.log("Kungvagnen är tom!");
     }
 };
