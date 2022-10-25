@@ -246,7 +246,3 @@ function addLocalStorageCartProductsToCartPage() {
         // console.log("Kungvagnen är tom!");
     }
 };
-
-cartCompletePurchaseBtn.addEventListener('click', e => {
-console.log(e)
-})
