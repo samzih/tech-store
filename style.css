@@ -258,3 +258,21 @@ main {
 .cartCompletePurchaseText {
     font-size: 25px;
 }
+
+@media only screen and (max-width: 640px) {
+    header {
+        flex-direction: column;
+    }
+    .login-and-reg-container {
+        justify-content: space-between;
+        width: 150px;
+        padding: 0;
+        margin-right: 20px;
+    }
+    .header-icons {
+        margin-top: 0.5rem;
+    }
+    main {
+        margin-top: 150px;
+    }
+}
