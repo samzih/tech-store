@@ -216,9 +216,8 @@ function addLocalStorageCartProductsToCartPage() {
             });
         }
 
-        // COMPLETE PURCASE ANCHOR TAG AND HREF ATTRIBUTE
+        // COMPLETE PURCASE ANCHOR TAG
         const cartCompletePurchaseAnchor = document.createElement("a");
-        cartCompletePurchaseAnchor.setAttribute("href", "ordercomplete.html");
 
         // TOTAL PRICE & COMPLETE PURCHASE
         const cartTotalPrice = document.createElement("h2");
@@ -247,12 +246,14 @@ function addLocalStorageCartProductsToCartPage() {
         cartCompletePurchaseBtn.appendChild(cartCompletePurchaseText);
 
      
-        cartCompletePurchaseBtn.addEventListener("click", function () {
-            console.log("123");
+        cartCompletePurchaseBtn.addEventListener("click", () => {
+            cartCompletePurchaseAnchor.setAttribute("href", "ordercomplete.html");
+            cartCompletePurchaseAnchor.style.textDecoration = "none";
+            localStorage.removeItem("cart");
         })
 
     } else {
+        // Displays the container on the shopping cart page that shows the cart is empty
         cartEmptyContainer.style.display = "flex";
-        // console.log("Kungvagnen är tom!");
     }
 };
