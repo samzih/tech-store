@@ -216,6 +216,9 @@ function addLocalStorageCartProductsToCartPage() {
             });
         }
 
+        // COMPLETE PURCASE ANCHOR TAG
+        const cartCompletePurchaseAnchor = document.createElement("a");
+
         // TOTAL PRICE & COMPLETE PURCHASE
         const cartTotalPrice = document.createElement("h2");
         const cartCompletePurchaseBtn = document.createElement("button");
@@ -227,6 +230,7 @@ function addLocalStorageCartProductsToCartPage() {
         cartCompletePurchaseBtn.classList = ("cartCompletePurchaseBtn");
         cartCompletePurchaseIcon.classList = ("fa-solid fa-check cartCompletePurchaseIcon");
         cartCompletePurchaseText.classList = ("cartCompletePurchaseText");
+        cartCompletePurchaseAnchor.classList = ("cartCompletePurchaseAnchor");
 
         // TOTAL PRICE IN <H2>
         cartTotalPrice.innerText = `Totalt pris: ${totalPrice} kr`;
@@ -236,13 +240,20 @@ function addLocalStorageCartProductsToCartPage() {
 
         // TOTAL PRICE + COMPLETE PURCHASE BUTTON APPENDED IN MAIN
         document.querySelector("main").appendChild(cartTotalPrice);
-        document.querySelector("main").appendChild(cartCompletePurchaseBtn);
+        document.querySelector("main").appendChild(cartCompletePurchaseAnchor);
+        cartCompletePurchaseAnchor.appendChild(cartCompletePurchaseBtn);
         cartCompletePurchaseBtn.appendChild(cartCompletePurchaseIcon);
         cartCompletePurchaseBtn.appendChild(cartCompletePurchaseText);
 
+     
+        cartCompletePurchaseBtn.addEventListener("click", () => {
+            cartCompletePurchaseAnchor.setAttribute("href", "ordercomplete.html");
+            cartCompletePurchaseAnchor.style.textDecoration = "none";
+            localStorage.removeItem("cart");
+        })
 
     } else {
+        // Displays the container on the shopping cart page that shows the cart is empty
         cartEmptyContainer.style.display = "flex";
-        // console.log("Kungvagnen är tom!");
     }
 };
