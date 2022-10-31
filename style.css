@@ -205,6 +205,7 @@ main {
 }
 .cartProductTitle {
     font-size: 2.7rem;
+    text-align: center;
 }
 .cartProductPrice {
     font-size: 1rem;
@@ -239,6 +240,7 @@ main {
     font-size: 1.75rem;
     font-weight: bold;
     margin: 2rem 0 3rem 0;
+    text-align: center;
 }
 
 
@@ -253,6 +255,7 @@ main {
     background-color: #5497f4;
     color: rgb(255, 255, 255);
     border-radius: 10px;
+    margin-bottom: 4rem;
 }
 .cartCompletePurchaseBtn:hover {
     background-color: #0f5dc9;
@@ -360,10 +363,6 @@ main {
 
     .cart-headline-container > h1 {
         font-size: 2.7rem;
-    }
-
-    .cartCompletePurchaseBtn {
-        margin-bottom: 4rem;
     }
 
     .productAddToCartIcon {

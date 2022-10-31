@@ -19,5 +19,35 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "LGV30.png",
         "price": 7495
+    },{
+        "title": "iPhone 14",
+        "description": "The brand new release from Apple that comes with a glass back that enables wireless charging.",
+        "image": "iPhone14.png",
+        "price": 11990
+    },{
+        "title": "Edge 30",
+        "description": "Amazing technology inside and designed for comfort outside.",
+        "image": "Edge30.png",
+        "price": 4990
+    },{
+        "title": "Galaxy S22",
+        "description": "The latest phone in the Galaxy series from Samsung.",
+        "image": "GalaxyS22.png",
+        "price": 9990
+    },{
+        "title": "Xperia 5 IV",
+        "description": "Creativity that fits in the palm of your hand.",
+        "image": "Xperia5IV.png",
+        "price": 9990
+    },{
+        "title": "Redmi 10C",
+        "description": "Look no farther if you're looking for high-quality performance at an honest price.",
+        "image": "Redmi10C.png",
+        "price": 1849
+    },{
+        "title": "Galaxy Z Flip4",
+        "description": "Unfold your world with a small but mighty smartphone.",
+        "image": "GalaxyZFlip4.png",
+        "price": 12990
     }
 ]
