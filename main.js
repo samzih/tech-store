@@ -48,7 +48,6 @@ function addProductsToWebpage() {
 
         // When clicking on the add to shopping cart button the object gets stored in local storage
         productAddToCartBtn.addEventListener("click", function() {
-            this.setAttribute("disabled", true);
             if (!localStorage.getItem("cart")) {
                 localStorage.setItem("cart", JSON.stringify([product]));
             }else {
@@ -197,7 +196,6 @@ function addLocalStorageCartProductsToCartPage() {
             // When you press the product "Ta bort" button it removes the object from cart LS
             cartProductRemoveFromCartBtn.addEventListener("click", function () {
                 // cartProduct is the object of the cartListOfProducts array
-                this.setAttribute("disabled", true);
                 let cartIndex = cartListOfProducts.indexOf(cartProduct);
                 cartListOfProducts.splice(cartIndex, 1)
                 localStorage.setItem("cart", JSON.stringify(cartListOfProducts));
