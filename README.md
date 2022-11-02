@@ -1,11 +1,11 @@
 # TechStore inlämningsuppgift (grupp 9)
 
-**Länk till GitHub repo** https://github.com/samzih/tech-store/
+### Länk till GitHub repo: https://github.com/samzih/tech-store
 
-##### Beskrivning av projektet
+#### Beskrivning av projektet
 I det här projektet har vi (Elin, Sam och Saeed) kombinerat vår kunskap inom webbutveckling genom HTML, CSS och JavaScript för att skapa den dynamiska e-handeln TechStore. TechStore är ett nystartat företag som specialiserar sig på att sälja teknikprylar.
 
-##### Förändringar/Förbättringar
+#### Förändringar/Förbättringar
 Vi har valt att visuellt ändra/förbättra nummersymbolen vid shoppingvagnen. Istället för att lägga den bredvid shoppingvagnen så har vi lagt den ovanpå inuti en orange box. Anledningen till detta var dels det visuella men även för att det såg snyggare än om den skulle ligga som en siffra bredvid "Logga in" och "Skapa konto". När vi tog detta beslutet har vi varit inspirerade av hur andra liknande e-handelsbutiker har gjort.
 
 Då vi fick fria händer till att välja vad vi skulle lägga "Logga in" och "Skapa konto" valde vi att lägga dessa i direkt anslutning till shoppingvagnen, även detta efter att ha inspirerats av andra e-handelsbutiker. Vi har däremot inte gjort dessa funktionella.
@@ -14,7 +14,7 @@ När kundvagnen är tom, istället för att bara ha en tom sida så har vi valt 
 
 I beskrivningen så stod det att vi skulle göra en popup när man tycker på "Slutför köp". I samråd med lärare har vi istället valt att använda oss av en ny HTML-sida. Så när man trycker på "Slutför köp" tar det användaren till en annan HTML-sida.
 
-### Krav som vi utfört
+#### Krav som vi utfört
 ##### Navigationsbar
 - Hemsidan skall innehålla en fixerad navigationsbar längst upp på sidan som går hela vägen från vänster till höger.
 - Till vänster i navigationsbaren skall det finnas en titel (TechStore) som skall vara klickbar, ett klick på titeln tar användaren till startsidan.
