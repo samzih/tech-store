@@ -6,9 +6,9 @@
 I det här projektet har vi (Elin, Sam och Saeed) kombinerat vår kunskap inom webbutveckling genom HTML, CSS och JavaScript för att skapa den dynamiska e-handeln TechStore. TechStore är ett nystartat företag som specialiserar sig på att sälja teknikprylar.
 
 ##### Förändringar/Förbättringar
-Vi har valt att visuellt ändra/förbättra nummersymbolen vid shoppingvagnen. Istället för att lägga den bredvid shoppingvagnen så harvi lagt den ovanpå inuti en orange box. Anledningen till detta var dels det visuella men även för att det såg snyggare än om den skulle ligga som en siffra bredvid "Logga in" och "Skapa konto". När vi tog detta beslutet har vi varit inspeirerade av hur andra liknande e-handelsbutiker har gjort.
+Vi har valt att visuellt ändra/förbättra nummersymbolen vid shoppingvagnen. Istället för att lägga den bredvid shoppingvagnen så har vi lagt den ovanpå inuti en orange box. Anledningen till detta var dels det visuella men även för att det såg snyggare än om den skulle ligga som en siffra bredvid "Logga in" och "Skapa konto". När vi tog detta beslutet har vi varit inspirerade av hur andra liknande e-handelsbutiker har gjort.
 
-Då vi fick fria händer till att välja vad vi skulle lägga "Logga in" och "Skapa konto" valde vi att lägga dessa i direkt anslutning till shoppingvagnen, även detta efter att ha inspiretats av andra e-handelsbutiker. Vi har däremot inte gjort dessa funktionella.
+Då vi fick fria händer till att välja vad vi skulle lägga "Logga in" och "Skapa konto" valde vi att lägga dessa i direkt anslutning till shoppingvagnen, även detta efter att ha inspirerats av andra e-handelsbutiker. Vi har däremot inte gjort dessa funktionella.
 
 När kundvagnen är tom, istället för att bara ha en tom sida så har vi valt att lägga en container med text i som beskriver för användaren att kundvagnen faktiskt är tom.
 
@@ -29,7 +29,7 @@ I beskrivningen så stod det att vi skulle göra en popup när man tycker på "S
 
 ##### Kundvagnssida
 - Kundvagnssidan skall lista produkterna som användaren har lagt till i kundvagnen.
-- Listan skall vara horizontell och centrerad.
+- Listan skall vara horisontell och centrerad.
 - Det ska gå att se flera produkter utan att behöva skrolla på sidan.
 - Varje produkt i listan skall visa bilden, titeln, priset och en knapp för att ta bort produkten ur kundvagnen.
 - Nedanför listan skall det finnas ett totalbelopp samt en knapp för att slutföra köpet.
