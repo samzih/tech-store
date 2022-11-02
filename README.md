@@ -3,7 +3,7 @@
 **Länk till GitHub repo** https://github.com/samzih/tech-store/
 
 ##### Beskrivning av projektet
-I det här projektet har vi (Elin, Sam och Saeed) kombinerat vår kunskap inom webutveckling genom HTML, CSS och JavaScript för att skapa den dynamiska e-handeln TechStore. TechStore är ett nystartat företag som specialiserar sig på att sälja teknikprylar.
+I det här projektet har vi (Elin, Sam och Saeed) kombinerat vår kunskap inom webbutveckling genom HTML, CSS och JavaScript för att skapa den dynamiska e-handeln TechStore. TechStore är ett nystartat företag som specialiserar sig på att sälja teknikprylar.
 
 ##### Förändringar/Förbättringar
 Vi har valt att visuellt ändra/förbättra nummersymbolen vid shoppingvagnen. Istället för att lägga den bredvid shoppingvagnen så harvi lagt den ovanpå inuti en orange box. Anledningen till detta var dels det visuella men även för att det såg snyggare än om den skulle ligga som en siffra bredvid "Logga in" och "Skapa konto". När vi tog detta beslutet har vi varit inspeirerade av hur andra liknande e-handelsbutiker har gjort.
